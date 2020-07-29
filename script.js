@@ -67,9 +67,20 @@ function getMeteo() {
   let hours = date.getHours();
 
   if (hours <= 22 && hours >= 5) {
-    if (weatherMain == "Clouds") {
+    if (
+      weatherMain == "Clouds" ||
+      weatherMain == "Windy" ||
+      weatherMain == "Breeze" ||
+      weatherMain == "Gale"
+    ) {
       bodyVar.style.backgroundImage = images.Clouds;
-    } else if (weatherMain == "Snow") {
+    } else if (
+      weatherMain == "Snow" ||
+      weatherMain == "Thunderstorm" ||
+      weatherMain == "Drizzle" ||
+      weatherMain == "Rain" ||
+      weatherMain == "Showers"
+    ) {
       bodyVar.style.backgroundImage = images.Snow;
     } else {
       bodyVar.style.backgroundImage = images.Sunny;
